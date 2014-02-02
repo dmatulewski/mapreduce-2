@@ -65,7 +65,7 @@
 1. Smykowski, Adrian.
 1. Sott, Tomasz. [BTS – On-Time Performance](/docs/tsott.md).
 1. Stefanowicz, Michał. [Szkoła](/docs/mstefanowicz.md).
-1. Szygenda, Mateusz.
+1. Szygenda, Mateusz. [Wypadki samochodowe](/docs/mszygenda.md).
 1. Tomczak, Robert. [Lista lotnisk](/docs/rtomczak/rtomczak.md).
 1. Wąsowicz, Michał.
 1. Winsławski, Bartłomiej.
