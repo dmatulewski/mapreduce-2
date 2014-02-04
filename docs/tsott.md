@@ -51,7 +51,7 @@ Sprawdzenie liczby rekordow:
 ```
 Przykładowy rekord:
 ```sh	
-	> db.air.findOne()
+	db.air.findOne()
 	{
 		"_id" : ObjectId("52a4879ea57524964ba8e4d7"),
 		"QUARTER" : 1,
