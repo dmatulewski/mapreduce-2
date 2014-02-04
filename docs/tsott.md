@@ -108,17 +108,17 @@ db.air.mapReduce(
 ```	
 Wykonanie:
 ```sh
-> var mapFunction1 = function() {
-... emit(this.CARRIER, 1);
-... };
-> var reduceFunction1 = function(key, values){
-... return Array.sum(values);
-... };
-> db.air.mapReduce(
-... mapFunction1,
-... reduceFunction1,
-... { out: "map_reduce1" }
-... )
+var mapFunction1 = function() {
+emit(this.CARRIER, 1);
+};
+var reduceFunction1 = function(key, values){
+return Array.sum(values);
+};
+db.air.mapReduce(
+mapFunction1,
+reduceFunction1,
+{ out: "map_reduce1" }
+)
 ```
 
 Wynik:
@@ -189,18 +189,18 @@ reduceFunction1,
 	
 Wykonanie:
 ```sh
-> var mapFunction1 = function() {
-... if(this.TAIL_NUM != "")
-... emit(this.TAIL_NUM, this.DISTANCE);
-... };
-> var reduceFunction1 = function(key, valuesDISTANCE_BY_PLANE){
-... return Array.sum(valuesDISTANCE_BY_PLANE);
-... };
-> db.air.mapReduce(
-... mapFunction1,
-... reduceFunction1,
-... { out: "distance_by_plane" }
-... )
+var mapFunction1 = function() {
+if(this.TAIL_NUM != "")
+emit(this.TAIL_NUM, this.DISTANCE);
+};
+var reduceFunction1 = function(key, valuesDISTANCE_BY_PLANE){
+return Array.sum(valuesDISTANCE_BY_PLANE);
+};
+db.air.mapReduce(
+mapFunction1,
+reduceFunction1,
+{ out: "distance_by_plane" }
+)
 
 ```
 
