@@ -32,7 +32,7 @@
 1. Karczewski, Kamil.
 1. Karwowski, Kamil.
 1. Kłeczek, Piotr.
-1. Kotłowski, Piotr.
+1. Kotłowski, Piotr. [Lotniska na świecie](/docs/pkotlowski.md).
 1. Koźmiński, Marcin.
 1. Królik, Przemysław.
 1. Kubacki, Konrad.
