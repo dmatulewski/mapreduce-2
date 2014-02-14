@@ -2,7 +2,8 @@
 
 ##***Zadanie 3***
 
-## Skorzystałem z list lotnisk na świecie http://openflights.org/data.html. Zawierają one takie dane jak: nazwa, miasto, państwo, położenie geograficzne.
+Skorzystałem z list lotnisk na świecie http://openflights.org/data.html. Zawierają one takie dane jak: nazwa, miasto, państwo, położenie geograficzne.
+
 Przykładowy rekord:
 ```json
 { "_id" : ObjectId("52fd61f01b6c883c74def6fc"), 
