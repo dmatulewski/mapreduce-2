@@ -31,7 +31,7 @@ Dane zaimortowałem do bazy poleceniem:
 
 Wyniki otrzymałem za pomocą MapReduce w następujący sposób:
 
-```JSON
+```
 var mapFunction = function() {
 	emit(this.letters, { words: [this.word]});
 };
