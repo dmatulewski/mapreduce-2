@@ -53,6 +53,25 @@ db.words.mapReduce(
 )
 ```
 
+Zdecydowana większość słów nie ma anagramów na tej liście. Poniżej zamieszczam kilkanaście rekordów z kolekcji z wynikami. Cała kolekcja wynikowa zawiera 7011 dokumentów:
+
+```JSON
+{ "_id" : "acdefh", "value" : { "words" : [  "chafed" ] } }
+{ "_id" : "acdefs", "value" : { "words" : [  "decafs" ] } }
+{ "_id" : "acdegr", "value" : { "words" : [  "cadger",  "graced" ] } }
+{ "_id" : "acdegs", "value" : { "words" : [  "cadges" ] } }
+{ "_id" : "acdehk", "value" : { "words" : [  "hacked" ] } }
+{ "_id" : "acdehr", "value" : { "words" : [  "arched" ] } }
+{ "_id" : "acdehs", "value" : { "words" : [  "cashed",  "chased" ] } }
+{ "_id" : "acdeht", "value" : { "words" : [  "detach" ] } }
+{ "_id" : "acdeir", "value" : { "words" : [  "cardie" ] } }
+{ "_id" : "acdeiv", "value" : { "words" : [  "advice" ] } }
+{ "_id" : "acdejk", "value" : { "words" : [  "jacked" ] } }
+{ "_id" : "acdekl", "value" : { "words" : [  "lacked",  "calked" ] } }
+{ "_id" : "acdekp", "value" : { "words" : [  "packed" ] } }
+{ "_id" : "acdekr", "value" : { "words" : [  "racked" ] } }
+```
+
 ##Faceted search - CouchDB
 
 Utworzyłem odpowiednie JSONy skryptem bardzo podobnym do poprzedniego:
@@ -95,5 +114,58 @@ Dla każdego zbioru liter zawartego w bazie udało mi się otrzymać tylko iloś
       }
     }
   }
+}
+```
+
+Fragment wyniku zwróconego przez powyższe Faceted Search:
+
+```JSON
+{
+    term: acerst
+    count: 6
+}
+{
+    term: belstu
+    count: 5
+}
+{
+    term: adeprs
+    count: 5
+}
+{
+    term: aceprs
+    count: 5
+}
+{
+    term: inopst
+    count: 4
+}
+{
+    term: elrstu
+    count: 4
+}
+{
+    term: eimrst
+    count: 4
+}
+{
+    term: eersst
+    count: 4
+}
+{
+    term: berstu
+    count: 4
+}
+{
+    term: aelsst
+    count: 4
+}
+{
+    term: aelrst
+    count: 4
+}
+{
+    term: aelpst
+    count: 4
 }
 ```
