@@ -1,13 +1,13 @@
 ### Mateusz Pikora
 
-Zadanie wykonałem korzystając z pliku word_list.txt zawartego w poleceniu zadania.
+Zadanie wykonałem korzystając z pliku word_list.txt, który był zawarty w poleceniu zadania.
 
 ## MapReduce - MongoDB
 
 Utworzyłem z pliku word_list.txt plik z JSONami zawierającymi słowo oraz składające się na nie litery w kolejności alfabetycznej przy pomocy skryptu:
 
-```
-#!/usr/local/bin/perl
+```Perl
+#!/bin/env perl
 open (INFILE, '<word_list.txt');
 open (OUTFILE, '>word_list2.json');
 
@@ -23,7 +23,7 @@ close (INFILE);
 close (OUTFILE); 
 ```
 
-Dane zaimortowałem do bazy poleceniem:
+Dane zaimportowałem do bazy poleceniem:
 
 ```
 ~/mongodb-linux/bin/mongoimport --collection words --file word_list2.json
@@ -31,7 +31,7 @@ Dane zaimortowałem do bazy poleceniem:
 
 Wyniki otrzymałem za pomocą MapReduce w następujący sposób:
 
-```
+```js
 var mapFunction = function() {
 	emit(this.letters, { words: [this.word]});
 };
@@ -57,8 +57,8 @@ db.words.mapReduce(
 
 Utworzyłem odpowiednie JSONy skryptem bardzo podobnym do poprzedniego:
 
-```
-#!/usr/local/bin/perl
+```Perl
+#!/bin/env perl
 open (INFILE, '<word_list.txt');
 open (OUTFILE, '>word_list3.json');
 
@@ -81,7 +81,7 @@ Zaimportowałem dane z pliku do bazy poleceniem:
 curl -s -XPOST localhost:9200/words/_bulk --data-binary @word_list3.json ; echo
 ```
 
-Dla każdego zbioru liter zawartego w bazie udało mi się otrzymać tylko ilośc słów, które są w bazie i składają się z takich samych liter. Zrobiłem to następującym faceted search:
+Dla każdego zbioru liter zawartego w bazie udało mi się otrzymać tylko ilość słów, które są w bazie i składają się z takich samych liter. Zrobiłem to następującym Faceted Search:
 
 ```JSON
 {
