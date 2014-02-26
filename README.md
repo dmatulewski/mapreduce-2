@@ -53,7 +53,7 @@
 1. Paczyński, Łukasz.
 1. Piasecka, Aleksandra.
 1. Pietraszuk, Bartłomiej.
-1. Pikora, Mateusz.
+1. Pikora, Mateusz. [Lista anagramów](/docs/mpikora.md).
 1. Plichta, Oskar.
 1. Puchalski, Paweł.
 1. Rogaszewski, Piotr.
