@@ -72,7 +72,7 @@ Zdecydowana większość słów nie ma anagramów na tej liście. Poniżej zamie
 { "_id" : "acdekr", "value" : { "words" : [  "racked" ] } }
 ```
 
-##Faceted search - CouchDB
+##Faceted search - Elasticsearch
 
 Utworzyłem odpowiednie JSONy skryptem bardzo podobnym do poprzedniego:
 
