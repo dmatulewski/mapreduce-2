@@ -57,7 +57,7 @@ Jakie są ilości konkretnych typów programów?
 
 
 ####Kod funkcji Map oraz Reduce
-
+```js
 var m = function() {
   emit(this.modelName, 1);
 };
@@ -70,10 +70,13 @@ var r = function(key, val) {
   }
   return count;
 };
+```
 
 ####Wykonanie
+```js
 var result= db.imdb.mapReduce(m,r, { out : "typProg" }
 );
+```
 
 ####Wynik
 ```json
@@ -115,7 +118,7 @@ Thu Feb 27 19:54:26.002 [conn1] 		M/R: (3/3) Final Reduce Progress: 2830100/3209
 Jakie tytuły są najpopularniejsze?
 
 ####Kod funkcji Map oraz Reduce
-
+```js
 var m = function() {
   emit(this.title.toLowerCase(), 1);
 };
@@ -128,10 +131,12 @@ var r = function(key, val) {
   }
   return count;
 };
-
+```
 ####Wykonanie
+```js
 var result= db.imdb.mapReduce(m,r, { out : "tytuly" }
 );
+```
 
 ####Wynik
 10 najpopularniejszych tytułów
