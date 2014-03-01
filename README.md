@@ -41,7 +41,7 @@
 1. Łuczun, Rafał.
 1. Malinowski, Piotr.
 1. Małecki, Maciej.
-1. Matulewski, Damian.
+1. Matulewski, Damian. [Głosowanie](/docs/dmatulewski.md).
 1. Melzer, Grzegorz.
 1. Mieszała, Konrad.
 1. Motel, Mateusz. [Stack Overflow Titles](/docs/mmotel.md).
