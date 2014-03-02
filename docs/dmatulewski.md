@@ -76,7 +76,7 @@ var result = db.vote.mapReduce(mapFunction, reduceFunction, {out: {inline: 1}});
 
 
 <h2>Drugi MapReduce</h2>
-5 Najczęściej wybieranych posłow w danym okręgu:
+5 Okręgów w których było najwięcej posłów:
 
 Funckja dotycząca okręgu i imienia.
 
@@ -106,7 +106,7 @@ MapReduce2:
 
 ```
 
-Posłowie najczęściej wybierani w danym okręgu:
+Ilość posłów w danym okręgu:
 
 ```sh
 db.ilosc.find().sort({value:-1}).limit(5)
