@@ -46,7 +46,7 @@ Funkcja zliczająca ilość wystąpień słowa "yes".
 var reduceFunction = function(key, values) {
     var yes = 0;
     for(i in values) {
-        if(values[i] === 18) {
+        if(values[i] === "yes") {
             yes++;
         }
     }
@@ -74,4 +74,52 @@ var result = db.vote.mapReduce(mapFunction, reduceFunction, {out: {inline: 1}});
 ![wykres1](../images/dmatulewski/diagram2.png)
 
 
+
+<h2>Drugi MapReduce</h2>
+5 Najczęściej wybieranych posłow w danym okręgu:
+
+Funckja dotycząca okręgu i imienia.
+
+```sh
+var mapFunction1 = function() 
+        { emit(this.leg_id,this.name);
+};
+```
+
+Funkcja zliczająca posłów w danym okręgu:
+
+```sh
+> var reduceFunction1 = function(key,values) 
+        { 
+        var ilosc = 0; for(i in values){ 
+        ilosc++; 
+        } 
+        return ilosc; };
+};
+
+```
+
+MapReduce2:
+
+```sh
+> var result = db.vote.mapReduce( mapFunction1, reduceFunction1, {out : "ilosc"} );
+
+```
+
+Posłowie najczęściej wybierani w danym okręgu:
+
+```sh
+db.ilosc.find().sort({value:-1}).limit(5)
+
+
+{ "_id" : "NYL000224", "value" : 56 }
+{ "_id" : "NYL000029", "value" : 39 }
+{ "_id" : "NYL000003", "value" : 37 }
+{ "_id" : "NYL000050", "value" : 37 }
+{ "_id" : "NYL000012", "value" : 36 }
+
+
+```
+
+![wykres2](../images/dmatulewski/diagram1.png)
 
